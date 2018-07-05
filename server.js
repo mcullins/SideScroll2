@@ -195,9 +195,17 @@ var sketchProc = function (processingInstance) {
             for (var i = 0; i < hunney.length; i++) {
                 hunney[i].draw();
                 ball.checkForHunneyGrab(hunney[i]);
-                hunney[i].x -= 2;
+                hunney[i].x -= 3;
             }
-          
+                      //Win Screen
+            if (ball.hunney > 40) {
+                background(51, 51, 204);
+                fill(255, 255, 102);
+                textSize(36);
+                text("YOU WIN!!!!", 100, 200);
+                textSize(15);
+                text("What, did you expect a prize?", 50, 350);
+            }
             
             //Bear Bounce
             if (keyPressed && keyCode === 0) {
