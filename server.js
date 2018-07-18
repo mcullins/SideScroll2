@@ -131,8 +131,8 @@ var sketchProc = function (processingInstance) {
         //Bear Hunney Grab
         Ball.prototype.checkForHunneyGrab =
             function (hunney) {
-                if ((hunney.x >= this.x && hunney.x <= (this.x + 20)) &&
-                    (hunney.y >= this.y && hunney.y <= (this.y + 60))) {
+                if ((hunney.x >= (this.x - 20) && hunney.x <= (this.x + 20)) &&
+                    (hunney.y >= (this.y - 60) && hunney.y <= (this.y + 60))) {
                     hunney.y = -400;
                     this.hunney++;
                 }
